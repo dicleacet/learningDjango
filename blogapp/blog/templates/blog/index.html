@@ -18,10 +18,14 @@
         <div class="col-9">
             <h1>homepage</h1>
             <hr>
-            {% include 'blog/partials/_blog.html' %}
-            {% include 'blog/partials/_blog.html' %}
-            {% include 'blog/partials/_blog.html' %}
-            {% include 'blog/partials/_blog.html' %}
+
+            {% for blog in blogs %}
+                {% if blog.is_home and blog.is_active %}
+                    {% include 'blog/partials/_blog.html' %}
+                {% endif %}
+            {% endfor %}
+
+         
         </div>
     </div>
 </div>
