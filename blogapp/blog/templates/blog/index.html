@@ -10,9 +10,21 @@
 
 {% block content %}
 
-<h1>Homepage</h1>
-
-<img src="{% static 'img/django.png' %}" alt="" width="100">
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-3">
+            {% include 'partials/_categories.html' %}
+        </div>
+        <div class="col-9">
+            <h1>homepage</h1>
+            <hr>
+            {% include 'blog/partials/_blog.html' %}
+            {% include 'blog/partials/_blog.html' %}
+            {% include 'blog/partials/_blog.html' %}
+            {% include 'blog/partials/_blog.html' %}
+        </div>
+    </div>
+</div>
 
 {% endblock %}
 

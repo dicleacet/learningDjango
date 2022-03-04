@@ -12,10 +12,8 @@
         {% block title %} {%endblock%} | Blogapp</title>
 </head>
 <body>
-    <ul>
-        <li><a href="">Homepage</a></li>
-        <li><a href="">Blogs</a></li>
-    </ul>
+    {% include 'partials/_navbar.html' %}
+   
     {% block content %}{% endblock %}
 
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
